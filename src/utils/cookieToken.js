@@ -5,6 +5,8 @@ const cookieToken = (user, res) => {
             Date.now() + 3 * 24 * 60 * 60 * 1000
         ),
         httpOnly: true,
+        sameSite: true,
+        signed: true,
 
     }
     user.password = undefined
