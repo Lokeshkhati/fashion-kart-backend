@@ -11,7 +11,11 @@ import wishlist from './routes/wishlist.js'
 
 config()
 app.use(express.json())
-app.use(cors({ origin: true, credentials: true }))
+const corsOptions = {
+    origin: true,
+    credentials: true,
+};
+app.use(cors(corsOptions))
 app.use(express.urlencoded({ extended: true }))
 app.use(bodyParser.json())
 
